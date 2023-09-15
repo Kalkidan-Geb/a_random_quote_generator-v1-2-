@@ -12,29 +12,29 @@ project 1 - A Random Quote Generator
 ***/
 
 const quotes = [
-  {guote: "Success is not final, failure is not fatal: It is the courage to continue that counts."
-    source: 'Winston Churchill'
+  {quote: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+    source: 'Winston Churchill',
     citation: "Speech to the House of Commons"
     year: 1942
   },
 
-  {guote: "The greatest glory in living lies not in never failing, but in rising every time we fall."
-  source: 'Nelson Mandela'
+  {quote: "The greatest glory in living lies not in never failing, but in rising every time we fall.",
+  source: 'Nelson Mandela',
   citation: "Long Walk to Freedom"
   year: 1994
   },
-  {guote: "There is no limit to what we, as women, can accomplish."
-  source: 'Michelle Obama'
+  {quote: "There is no limit to what we, as women, can accomplish.",
+  source: 'Michelle Obama',
   citation: "US Women Summit speech"
   year: 2016
 },
-{guote: "In a world filled with despair, we must still dare to dream. And in a world filled with distrust, we must still dare to believe."
-  source: 'Michael Jackson'
+{quote: "In a world filled with despair, we must still dare to dream. And in a world filled with distrust, we must still dare to believe.",
+  source: 'Michael Jackson',
   citation: "Dancing the Dream"
   year: 2001
   },
-{guote: "The world is but a canvas to our imagination."
-  source: 'Henry David Thoreau'
+{quote: "The world is but a canvas to our imagination.",
+  source: 'Henry David Thoreau',
   citation: "Walden"
   year: 1854 
 }
@@ -56,17 +56,16 @@ function printQuote(){
   const randomQuote = getRandomQuote()
 
 
-  let html = '
+  let html = `
   <p class="quote">${randomQuote['quote']}</p>
-  <p class="source">${randomQuote['source']} '
+  <p class="source">${randomQuote['source']} `
 
   if ( randomQuote['citation'] ){
-    html += '<span class="citation"> ${randomQuote['citation']} </span>'
+    html += `<span class="citation"> ${randomQuote['citation']} </span>`
   }
   if ( randomQuote['year'] ){
-    html += '<span class="year"> ${randomQuote['year']} </span>'
+    html += `<span class="year"> ${randomQuote['year']} </span>`
   }
-}
   html += '<p>'
   document.getElementById('quote-box').innerHTML = html;     
 }
